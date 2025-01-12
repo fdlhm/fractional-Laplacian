@@ -1,4 +1,4 @@
-% fractionalLaplacianwithL.m
+% fractionalLaplacianexamplewithL.m
 % If you use it, please cite the corresponding paper:
 % Jorge Cayama, Francisco de la Hoz, Carlota Mar\'{\i}a Cuesta, Carlos Javier Garc\'{\i}a-Cervera,
 % A fast convolution method for the fractional Laplacian in $\mathbb{R}$, (2025).
