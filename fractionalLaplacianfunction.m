@@ -4,7 +4,7 @@
 % A fast convolution method for the fractional Laplacian in $\mathbb{R}$, (2025).
 %
 % This program computes the fractional Laplacian of a function $u(x)$
-% whose values $u(x_j)$ are known
+% whose values $u(x_j)$, stored in the vector uxj, are known.
 function fraclapnum=fractionalLaplacianfunction(uxj,r,a,L)
 N=length(uxj); % Number $N$ of nodes
 % sj is the vector containing the nodes $s_j$
