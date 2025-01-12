@@ -25,8 +25,7 @@ u_(abs(u_)/(2*N)<eps)=0; % Apply the Krasny filter
 % utilde_ is the vector containing the values $\hat{\tilde u}(k)$
 utilde_=2*r*[u_(1:N);zeros((4*r-2)*N,1);u_(N+1:2*N)]...
     .*exp(1i*pi*[0:2*r*N-1 -2*r*N:-1]'/(4*r*N));
-% ik is the vector containing $ik$, with
-% $k\in\{0,\ldots,2rN-1\}\cup\{-2rN,\ldots,-1\}$
+% ik is the vector containing $ik$, with $k\in\{0,\ldots,2rN-1\}\cup\{-2rN,\ldots,-1\}$
 ik=1i*[0:2*r*N-1 -2*r*N:-1]';
 % tildesn12 is the vector containing the values $\tilde s_{n+1/2}$
 tildesn12=pi*((0:2*r*N-1)'+.5)/(2*r*N);
