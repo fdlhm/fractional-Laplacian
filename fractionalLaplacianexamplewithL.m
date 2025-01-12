@@ -16,7 +16,7 @@ sj=pi*((0:N-1)'+.5)/N;
 % xj is the vector containing the nodes $x_j=\cot(s_j)$
 xj=L*cot(sj);
 tic
-% uxj is the vector containing the values $u(x_j)=\erf(x_j)
+% uxj is the vector containing the values $u(x_j)=\erf(x_j)$
 uxj=erf(xj);
 % Compute the FFT of an even extension of $\erf$
 % u_ is the vector containing the values $\hat{u}(k)$
