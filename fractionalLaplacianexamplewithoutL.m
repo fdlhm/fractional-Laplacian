@@ -18,7 +18,7 @@ f=@(s)(-4*sin(s)+4i*cos(s)).*exp(2i*s);
 F=f(pi*((0:2*r*N-1)'+1/2)/(2*r*N));
 % Invoke the Matlab function singularintegral, to obtain the vector I
 % containing the numerical approximation of the values $I(s_j)$
-I=singularintegral(N,r,a,1-a,F);
+I=singularintegral(N,r,a,1-a,F); % Invoke the function singularintegral
 % sj is the vector containing the nodes $s_j$
 sj=pi*((0:N-1)'+.5)/N;
 % fraclapnum and fraclap store respectively the numerical approximation
