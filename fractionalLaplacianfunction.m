@@ -5,8 +5,9 @@
 %
 % This program computes the fractional Laplacian of a function $u(x)$
 % whose values $u(x_j)$, stored in the vector uxj, are known.
+% The variables N, r, a and L denote respectively $N$, $r$, $\alpha$ and $L$
 function fraclapnum=fractionalLaplacianfunction(uxj,r,a,L)
-N=length(uxj); % Number $N$ of nodes
+N=length(uxj);
 % sj is the vector containing the nodes $s_j$
 sj=pi*((0:N-1)'+.5)/N;
 % u_ is the vector containing the values $\hat{u}(k)$
