@@ -5,8 +5,7 @@
 %
 % This program approximates numerically the fractional Laplacian of
 % $u(x)=\erf(x)$ ($\erf$ is defined in LaTeX by $\DeclareMathOperator{\erf}{erf}$).
-% The variables N, r, a and L denote respectively $N$, $r$, $\alpha$
-% and $L$
+% The variables N, r, a and L denote respectively $N$, $r$, $\alpha$ and $L$
 clear
 N=1048576;
 r=8;
