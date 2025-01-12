@@ -41,7 +41,7 @@ F=sin(tildesn12).*usstildesn12(1:2*r*N)...
     +2*cos(tildesn12).*ustildesn12(1:2*r*N);
 % Invoke the Matlab function singularintegral, to obtain the vector I
 % containing the numerical approximation of the values $I(s_j)$
-I=singularintegral(N,r,a,1-a,F);
+I=singularintegral(N,r,a,1-a,F); % Invoke the function singularintegral
 % fraclapnum and fraclap store respectively the numerical approximation
 % and the exact value of the fractional Laplacian of $u(x)$
 fraclapnum=(1/(L^a*2*gamma(2-a)*cos(pi*a/2)))*sin(sj).^(a-1).*I;
