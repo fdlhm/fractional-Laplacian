@@ -9,9 +9,9 @@
 % In this example, $f(x)=\erf(x)$ ($\erf$ is defined in LaTeX by $\DeclareMathOperator{\erf}{erf}$).
 % The variables N, r, a and L denote respectively $N$, $r$, $\alpha$ and $L$
 clear
-N=64;
-r=128 * 32;
-a=1.97;
+N=128;
+r=256;
+a=0.1;
 L=2.1;
 % sj is the vector containing the nodes $s_j$
 sj=pi*((0:N-1)'+.5)/N;
