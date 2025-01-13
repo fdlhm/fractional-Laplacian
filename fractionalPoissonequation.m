@@ -37,6 +37,6 @@ for k=1:N
 end
 % unum is the vector containing the numerical approximation of the values $u(x_j)$
 unum=[Ma;b]\[fxj;u0];
-norm(unum-u,inf) % Error in discrete $L^2$ norm
 norm(unum-u,2) % Error in discrete $L^\infty$ norm
+norm(unum-u,"inf") % Error in discrete $L^2$ norm
 toc
