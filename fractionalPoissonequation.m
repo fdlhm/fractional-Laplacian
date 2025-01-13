@@ -18,8 +18,8 @@ sj=pi*((0:N-1)'+.5)/N;
 % xj is the vector containing the nodes $x_j=\cot(s_j)$
 xj=L*cot(sj);
 tic
-% uxj is the vector containing the exact values $u(x_j)=\erf(x_j)$
-uxj=erf(xj);
+% u is the vector containing the exact values $u(x_j)=\erf(x_j)$
+u=erf(xj);
 u0=-1;
 % fxj is the vector containing the values $f(x_j)$
 fxj=(2^(1+a)*gamma((1+a)/2)/pi)*xj.*hypergeom((1+a)/2,3/2,-xj.^2);
@@ -35,8 +35,8 @@ for k=1:N
     Ma(:,k)=fraclapuk;
     b(k)=ukminusinfinity;
 end
-% uxj is the vector containing the numerical approximation of the values $u(x_j)$
-uxjnum=[Ma;b]\[fxj;u0];
-norm(uxjnum-uxj,inf) % Error in discrete $L^2$ norm
-norm(uxjnum-uxj,2) % Error in discrete $L^\infty$ norm
+% unum is the vector containing the numerical approximation of the values $u(x_j)$
+unum=[Ma;b]\[fxj;u0];
+norm(unum-u,inf) % Error in discrete $L^2$ norm
+norm(unum-u,2) % Error in discrete $L^\infty$ norm
 toc
