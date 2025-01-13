@@ -37,6 +37,6 @@ for k=1:N
 end
 % uxj is the vector containing the numerical approximation of the values $u(x_j)$
 uxjnum=[Ma;b]\[fxj;u0];
-norm(uxj - uxjnum, inf) % Error in discrete $L^2$ norm
-norm(uxj - uxjnum, 2) % Error in discrete $L^\infty$ norm
+norm(uxjnum-uxj,inf) % Error in discrete $L^2$ norm
+norm(uxjnum-uxj,2) % Error in discrete $L^\infty$ norm
 toc
