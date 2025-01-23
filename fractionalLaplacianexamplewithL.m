@@ -29,16 +29,15 @@ utilde_=2*r*[u_(1:N);zeros((4*r-2)*N,1);u_(N+1:2*N)]...
 ik=1i*[0:2*r*N-1 -2*r*N:-1]';
 % tildesn12 is the vector containing the values $\tilde s_{n+1/2}$
 tildesn12=pi*((0:2*r*N-1)'+.5)/(2*r*N);
-% ustildesn12 is the vector containing the numerical approximation of
-% the values $u_s(\tilde s_{n+1/2})$
-ustildesn12=ifft(ik.*utilde_);
-% usstildesn12 is the vector containing the numerical approximation of
-% the values $u_{ss}(\tilde s_{n+1/2})$
-usstildesn12=ifft(ik.^2.*utilde_);
+% Ustildesn12 is the vector containing the numerical approximation of
+% the values $U_s(\tilde s_{n+1/2})$
+Ustildesn12=ifft(ik.*utilde_);
+% Usstildesn12 is the vector containing the numerical approximation of
+% the values $U_{ss}(\tilde s_{n+1/2})$
+Usstildesn12=ifft(ik.^2.*utilde_);
 % F is the vector containing the numerical approximation of the values
 % $f(\tilde s_{n+1/2}$
-F=sin(tildesn12).*usstildesn12(1:2*r*N)...
-    +2*cos(tildesn12).*ustildesn12(1:2*r*N);
+F=sin(tildesn12).*Usstildesn12(1:2*r*N)+2*cos(tildesn12).*Ustildesn12(1:2*r*N);
 % Invoke the Matlab function singularintegral, to obtain the vector I
 % containing the numerical approximation of the values $I(s_j)$
 I=singularintegral(N,r,a,1-a,F); % Invoke the function singularintegral
