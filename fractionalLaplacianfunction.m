@@ -4,9 +4,10 @@
 % A fast convolution method for the fractional Laplacian in $\mathbb{R}$, (2025).
 %
 % This program computes the fractional Laplacian of a function $u(x)$
-% whose values $u(x_j)$, stored in the vector uxj, are known.
+% whose values $u(x_j)$, stored in the vector uxj, are known. Additionally,
+% it returns $u(-\infty)$ obtained by means of spectral interpolation.
 % The variables N, r, a and L denote respectively $N$, $r$, $\alpha$ and $L$
-function fraclapnum=fractionalLaplacianfunction(uxj,r,a,L)
+function [fraclapnum,uminusinfinity]=fractionalLaplacianfunction(uxj,r,a,L)
 N=length(uxj);
 % sj is the vector containing the nodes $s_j$
 sj=pi*((0:N-1)'+.5)/N;
@@ -26,3 +27,4 @@ F=sin(tildesn12).*Usstildesn12(1:2*r*N)+2*cos(tildesn12).*Ustildesn12(1:2*r*N);
 I=singularintegral(N,r,a,1-a,F); % Invoke the function singularintegral
 % fraclapnum stores the numerical approximation of the fractional Laplacian of $u(x)$
 fraclapnum=(1/(L^a*2*gamma(2-a)*cos(pi*a/2)))*sin(sj).^(a-1).*I;
+uminusinfinity=sum((-1).^(0:2*N-1)'.*u_)/(2*N);
