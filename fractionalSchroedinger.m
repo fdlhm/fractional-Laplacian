@@ -1,7 +1,9 @@
 % fractionalSchroedinger.m
 % If you use it, please cite the corresponding paper:
 % Jorge Cayama, Francisco de la Hoz, Carlota Mar\'{\i}a Cuesta, Carlos Javier Garc\'{\i}a-Cervera,
-% A fast convolution method for the fractional Laplacian in $\mathbb{R}$, (2025).
+% A fast convolution method for the fractional Laplacian in R,
+% Revista de la Real Academia de Ciencias Exactas, F\'{\i}sicas y Naturales. Serie A. Matem\'aticas 119:80 (2025), 1-45.
+% https://rdcu.be/eszTL
 %
 % This program simulates the fractional cubic nonlinear Schr\"odinger equation in the focusing case
 % by means of an explicit 4th order Runge-Kutta scheme.
