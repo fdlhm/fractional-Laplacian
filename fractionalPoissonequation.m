@@ -1,8 +1,9 @@
-% fractionalpoissonequation.m
-% fractionalLaplacianfunction.m
+% fractionalPoissonequation.m
 % If you use it, please cite the corresponding paper:
 % Jorge Cayama, Francisco de la Hoz, Carlota Mar\'{\i}a Cuesta, Carlos Javier Garc\'{\i}a-Cervera,
-% A fast convolution method for the fractional Laplacian in $\mathbb{R}$, (2025).
+% A fast convolution method for the fractional Laplacian in R,
+% Revista de la Real Academia de Ciencias Exactas, F\'{\i}sicas y Naturales. Serie A. Matem\'aticas 119:80 (2025), 1-45.
+% https://rdcu.be/eszTL
 %
 % This program solves the fractional Poisson equation, i.e., given $f(x)$,
 % it finds $u(x)$, such that $(-\Delta^{\alpha/2})u(x)=f(x)$, and $u(-\infty)=u_0$.
